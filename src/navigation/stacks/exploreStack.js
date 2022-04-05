@@ -1,15 +1,15 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import Library from '../../pages/Library';
+import Explore from '../../pages/Explore';
 
 const Stack = createStackNavigator();
 
-const LibraryStack = () => {
+const ExploreStack = () => {
     return (
         <Stack.Navigator screenOptions={{headerShown:false}}>
-            <Stack.Screen name="LibraryScreen" component={Library} />
+            <Stack.Screen name="ExploreScreen" component={Explore} />
         </Stack.Navigator>
     )
 }
 
-export default LibraryStack
+export default ExploreStack

@@ -2,9 +2,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
 import Ant from 'react-native-vector-icons/AntDesign';
 import Ioni from 'react-native-vector-icons/Ionicons';
+import Foundation from 'react-native-vector-icons/Foundation';
 import HomeStack from './homeStack';
 import SettingsStack from './settingsStack';
-import LibraryStack from './libraryStack';
+import ExploreStack from './exploreStack';
 
 const Tab = createBottomTabNavigator()
 
@@ -23,9 +24,9 @@ const BottomStack = () => {
             }} component={HomeStack} name="Home" />
             <Tab.Screen options={{
                 tabBarIcon: ({ color }) => (
-                    <Ioni name="library-outline" color={color} size={19} />
+                    <Foundation name="compass" color={color} size={19} />
                 )
-            }} component={LibraryStack} name="Library" />
+            }} component={ExploreStack} name="Explore" />
             <Tab.Screen options={{
                 tabBarIcon: ({ color }) => (
                     <Ant name="setting" color={color} size={19} />
