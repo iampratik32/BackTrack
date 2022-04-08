@@ -76,3 +76,10 @@ export const GlobalText = styled.Text`
     color: ${p => p.color ? p.color : colors.white};
     font-size: ${p => p.fontSize ? p.fontSize : '16px'};
 `
+export const DetailImage = styled.Image`
+width:100%;
+height:200px;
+
+
+
+`

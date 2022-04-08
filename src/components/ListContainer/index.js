@@ -4,16 +4,17 @@ import { FlatList } from 'react-native-gesture-handler';
 import MovieCard from '../MovieCard';
 import { ComponentTitle, FlexVertical, VSpacer } from '../../assets/globalStyle';
 
-const ListContainer = ({ data, title }) => {
+const ListContainer = ({ data, title}) => {
     return (
         <FlexVertical>
             <ComponentTitle>{title}</ComponentTitle>
             <VSpacer rem={15} />
             <FlatList horizontal data={data}
-                renderItem={(item) => <MovieCard data={item} />}
+                renderItem={(item) => <MovieCard data={item} navigation/>}
                 keyExtractor={item => item.ids.slug} />
             <VSpacer rem={25} />
         </FlexVertical>
+
     )
 }
 

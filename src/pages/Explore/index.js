@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { HeaderText, VSpacer, MainView } from '../../assets/globalStyle'
 import useWindowDimensions from 'react-native/Libraries/Utilities/useWindowDimensions';
 import { keyExtractor } from 'react-native/Libraries/Lists/VirtualizeUtils';
 import ListContainer from '../../components/ListContainer';
 
-const Explore = () => {
+const Explore = ({navigation}) => {
   const [landscape, setLandscape] = useState(false)
 
   const windowWidth = useWindowDimensions().width

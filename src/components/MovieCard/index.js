@@ -3,13 +3,17 @@ import React from 'react'
 import { CardImage, VSpacer, CardText, MovieCard as MC, CardViewer, GlobalText, HSpacer, CardViewer2 } from '../../assets/globalStyle'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import { useNavigation } from '@react-navigation/native';
 import { colors } from '../../assets/colors'
 
-const MovieCard = ({ data }) => {
+const MovieCard = ({ data}) => {
+    const navigation = useNavigation();
     const val = data.item
     const tempImage = "https://static.onecms.io/wp-content/uploads/sites/6/2010/06/mad-men-season-4_510.jpg"
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{navigation.navigate('DetailScreen', {
+            data:data,
+        })}}>
             <MC>
                 <CardViewer>
                     <AntDesign name='eyeo' color={colors.white} size={12} />
