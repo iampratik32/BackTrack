@@ -4,7 +4,7 @@ import Ant from 'react-native-vector-icons/AntDesign';
 import Ioni from 'react-native-vector-icons/Ionicons';
 import Foundation from 'react-native-vector-icons/Foundation';
 import HomeStack from './homeStack';
-import SettingsStack from './settingsStack';
+import ProfileStack from './profileStack';
 import ExploreStack from './exploreStack';
 
 const Tab = createBottomTabNavigator()
@@ -29,9 +29,9 @@ const BottomStack = () => {
             }} component={ExploreStack} name="Explore" />
             <Tab.Screen options={{
                 tabBarIcon: ({ color }) => (
-                    <Ant name="setting" color={color} size={19} />
+                    <Ant name="user" color={color} size={19} />
                 )
-            }} component={SettingsStack} name="Settings" />
+            }} component={ProfileStack} name="Profile" />
         </Tab.Navigator>
     )
 }

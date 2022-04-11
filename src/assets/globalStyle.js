@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import { size } from '../utils/device'
 import { colors } from './colors'
 
 export const FlexVertical = styled.View`
@@ -10,7 +11,6 @@ export const FlexHorizontal = styled.View`
     flex-direction: row;
 `
 
-
 export const MainView = styled.ScrollView`
     flex-direction: column;
     background-color: ${colors.materialBlack};
@@ -20,7 +20,7 @@ export const MainView = styled.ScrollView`
 `
 
 export const HeaderText = styled.Text`
-    font-size: 32px;
+    font-size: ${p => p.size ? p.size : '32px'};
     color: ${colors.white};
     letter-spacing: 0.4px;
     font-weight: bold;
