@@ -1,6 +1,7 @@
 import styled from 'styled-components/native'
 import { colors } from '../../assets/colors';
 import { size } from '../../utils/device';
+import { ImageBackground } from "react-native";
 import { FlexHorizontal, FlexVertical, GlobalText } from '../../assets/globalStyle';
 const width = size().width
 const height = size().height
@@ -12,6 +13,7 @@ export const CardView = styled(FlexVertical)`
     padding-bottom: ${height * 0.01}px;
     padding-top: ${height * 0.01}px;
     background-color: ${colors.darkBlueGrey};
+    flex: 1;
 `
 export const AvatarContainer = styled.View`
     flex: 1;
@@ -47,4 +49,12 @@ export const AvatarStatWrapper = styled(FlexVertical)`
 
 export const StatText = styled(GlobalText)`
     margin-top: ${height * 0.005}px;
+`
+
+export const CardBackground = styled(ImageBackground)`
+    height: ${height * 0.13}px;
+    display: flex;
+    justify-content: flex-end;
+    padding: ${height*0.01}px;
+    margin-bottom: ${height * 0.015}px;
 `
