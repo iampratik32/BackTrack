@@ -7,7 +7,6 @@ const height = size().height
 
 export const HistoryWrapper = styled(FlexVertical)`
     background-color: ${colors.materialBlack};
-    margin-bottom: ${height * 0.02}px;
 `
 
 export const HistoryTopContainer = styled(FlexHorizontal)`
@@ -18,4 +17,5 @@ export const HistoryTopContainer = styled(FlexHorizontal)`
 `
 export const HistoryMainContiner = styled(FlexVertical)`
     padding: ${height * 0.01}px;
+    height: ${p => p.closed ? '0px' : 'undefined'};
 `
