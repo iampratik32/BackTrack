@@ -11,6 +11,11 @@ export const FlexHorizontal = styled.View`
     flex-direction: row;
 `
 
+export const SafeView = styled.SafeAreaView`
+    flex: 1;
+    background-color: ${colors.materialBlack};
+`
+
 export const MainView = styled.ScrollView`
     flex-direction: column;
     background-color: ${colors.materialBlack};

@@ -1,13 +1,18 @@
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import Profile from '../../pages/Profile';
+import History from '../../pages/Profile/History';
 
 const Stack = createStackNavigator();
-
+const TransitionScreenOptions = {
+    ...TransitionPresets.SlideFromRightIOS,
+    headerShown: false
+};
 const ProfileStack = () => {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="ProfileScreen" component={Profile} initialParams={'ok'} />
+        <Stack.Navigator screenOptions={TransitionScreenOptions}>
+            <Stack.Screen name="ProfileScreen" component={Profile} />
+            <Stack.Screen name="ProfileHistoryScreen" animationEnabled={true} component={History} />
         </Stack.Navigator>
     )
 }

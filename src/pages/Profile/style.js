@@ -3,9 +3,9 @@ import { colors } from '../../assets/colors';
 import { size } from '../../utils/device';
 import { ImageBackground } from "react-native";
 import { FlexHorizontal, FlexVertical, GlobalText } from '../../assets/globalStyle';
+
 const width = size().width
 const height = size().height
-
 export const CardView = styled(FlexVertical)`
     /* border-radius: 20%; */
     padding-left: ${width * 0.03}px;
@@ -28,7 +28,7 @@ export const Avatar = styled.Image`
 
 export const AvatarDetailContainer = styled(FlexVertical)`
     flex: 3;
-    padding-left: ${width * 0.03};
+    padding-left: ${width * 0.03}px;
 `
 
 export const AvatarName = styled.Text`

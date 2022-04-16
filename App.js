@@ -21,6 +21,7 @@ import Dashboard from './src/pages/Dashboard';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigator from './src/navigation/navigators';
 import { LogBox } from 'react-native';
+import { SafeView } from './src/assets/globalStyle';
 
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
@@ -29,13 +30,10 @@ LogBox.ignoreLogs([
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    flex: 1,
-  };
-  
+
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <Navigator />
       {/* <ScrollView
@@ -45,7 +43,7 @@ const App: () => Node = () => {
             
           </View>
     </ScrollView> */}
-    </SafeAreaView >
+    </SafeView >
   );
 };
 
