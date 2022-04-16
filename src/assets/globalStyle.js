@@ -79,6 +79,7 @@ export const CardViewer = styled(FlexHorizontal)`
 `
 export const GlobalText = styled.Text`
     color: ${p => p.color ? p.color : colors.white};
+    font-weight: ${p => p.weight ? p.weight : 100};
     font-size: ${p => p.fontSize ? p.fontSize : '16px'};
 `
 export const DetailImage = styled.Image`

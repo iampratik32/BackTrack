@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { FlexHorizontal, FlexVertical, MainView } from '../../../assets/globalStyle'
+import { FlexHorizontal, FlexVertical, MainView, VSpacer } from '../../../assets/globalStyle'
 import { size } from '../../../utils/device'
 import Octicons from 'react-native-vector-icons/Octicons'
 import { colors } from '../../../assets/colors'
@@ -14,6 +14,8 @@ const History = ({ navigation }) => {
         <MainView>
             <HistoryContainer />
             <HistoryContainer />
+            <HistoryContainer />
+            <VSpacer rem={25} />
         </MainView>
     )
 }

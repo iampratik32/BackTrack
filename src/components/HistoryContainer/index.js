@@ -1,18 +1,20 @@
-import { View, Text, Animated, LayoutAnimation, UIManager } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { FlexHorizontal, FlexVertical } from '../../assets/globalStyle'
-import { HistoryMainContiner, HistoryTopContainer, HistoryWrapper } from './style'
+import React, { useState } from 'react'
+import { Animated, LayoutAnimation, Text, UIManager, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import Octicons from 'react-native-vector-icons/Octicons'
-import { colors } from '../../assets/colors'
 import Easing from 'react-native/Libraries/Animated/Easing'
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
-import ListContainer from '../ListContainer'
+import { colors } from '../../assets/colors'
+import { size } from '../../utils/device'
+import MovieCard from '../MovieCard'
+import { HistoryMainContiner, HistoryTopContainer, HistoryWrapper } from './style'
 
 const HistoryContainer = () => {
 
     Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental ? UIManager.setLayoutAnimationEnabledExperimental(true) : undefined
+    const tempImage = "https://static.onecms.io/wp-content/uploads/sites/6/2010/06/mad-men-season-4_510.jpg"
 
     const [open, setOpen] = useState(true)
+    const [hide, setHide] = useState(false)
     const spinValue = new Animated.Value(open ? 0 : 1)
 
     Animated.timing(
@@ -29,6 +31,12 @@ const HistoryContainer = () => {
             LayoutAnimation.Properties.scaleY
         ))
         setOpen(!open)
+        if (!open) {
+            setTimeout(() => {
+                setHide(false)
+            }, 100)
+        }
+        else setHide(true)
     }
 
     const spin = spinValue.interpolate({
@@ -48,8 +56,11 @@ const HistoryContainer = () => {
                     </Animated.View>
                 </HistoryTopContainer>
             </TouchableOpacity>
-            <HistoryMainContiner closed={!open}>
-                
+            <HistoryMainContiner hide={hide} closed={!open}>
+                <View style={{ padding: size().height * 0.01 }}>
+                    <MovieCard />
+                </View>
+
             </HistoryMainContiner>
         </HistoryWrapper>
     )
