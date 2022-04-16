@@ -9,5 +9,15 @@ export const colors = {
     collected: '#16A085',
     wachlist: '#2B678F',
     rating: '#A81918',
-    ratingBack: '#B80E0E'
+    ratingBack: '#B80E0E',
+    weakSauce: '#616161',
+    terrible: '#675B5B',
+    bad: '#705252',
+    poor: '#7A4747',
+    meh: '#863C3C',
+    fair: '#922F30',
+    good: '#9E2424',
+    great: '#A81918',
+    superb: '#B11010',
+    totalNinja: '#B70A0A',
 }

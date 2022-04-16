@@ -1,6 +1,8 @@
 import styled from 'styled-components/native'
 import { size } from '../utils/device'
 import { colors } from './colors'
+const height = size().height
+const width = size().width
 
 export const FlexVertical = styled.View`
     display: flex;
@@ -83,9 +85,17 @@ export const GlobalText = styled.Text`
     font-size: ${p => p.fontSize ? p.fontSize : '16px'};
 `
 export const DetailImage = styled.Image`
-width:100%;
-height:200px;
+    width:100%;
+    height:200px;
 
-
-
+`
+export const OkButton = styled.Pressable`
+    padding: ${height * 0.01}px;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 1px solid ${colors.rating};
+    margin: ${height*0.01}px;
+`
+export const LoadingContainer = styled.View`
+    margin: ${height*0.01}px;
 `

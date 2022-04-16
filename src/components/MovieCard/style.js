@@ -19,8 +19,9 @@ export const Poster = styled.Image`
 export const PosterFooter = styled(FlexHorizontal)`
     height: 41px;
 `
-export const PosterIconWrapper = styled(FlexHorizontal)`
+export const PosterIconWrapper = styled.TouchableOpacity`
     flex: ${p => p.flex ? p.flex : 1};
+    flex-direction: row;
     background-color: ${p => p.back ? p.back : colors.black};
     align-items: center;
     justify-content: center;
@@ -53,7 +54,7 @@ export const PosterRating = styled(FlexHorizontal)`
     z-index: 10;
 `
 
-export const Rating = styled(GlobalText)`
+export const MovieRating = styled(GlobalText)`
     font-size: 12px;
     top: 0;
     text-align: center;
