@@ -6,16 +6,24 @@ import Foundation from 'react-native-vector-icons/Foundation';
 import HomeStack from './homeStack';
 import ProfileStack from './profileStack';
 import ExploreStack from './exploreStack';
+import { colors } from '../../assets/colors';
 
 const Tab = createBottomTabNavigator()
 
 const BottomStack = () => {
     return (
-        <Tab.Navigator screenOptions={{
+        <Tab.Navigator 
+        screenOptions={{
             headerShown: false,
+            tabBarActiveTintColor: colors.white,
+            tabBarInactiveTintColor: colors.blueGreyDark,
+            tabBarStyle: {
+                height: 50,
+                paddingBottom: 5,
+                borderTopColor: colors.darkGray,
+                backgroundColor: colors.materialBlack
+            },
             showLabel: true,
-            inactiveTintColor: '#000',
-            activeTintColor: '#000',
         }}>
             <Tab.Screen options={{
                 tabBarIcon: ({ color }) => (
