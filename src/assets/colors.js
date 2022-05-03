@@ -9,6 +9,7 @@ export const colors = {
     collected: '#16A085',
     wachlist: '#2B678F',
     rating: '#A81918',
+    redButton: '#ed1c24',
     ratingBack: '#B80E0E',
     weakSauce: '#616161',
     terrible: '#675B5B',

@@ -7,6 +7,7 @@ import { colors } from '../../assets/colors'
 import { GlobalText, HSpacer, OkButton } from '../../assets/globalStyle'
 import MainModal from '../Modal'
 import RatingModal from '../RatingModal'
+import WatchedModal from '../WatchedModal'
 import { MovieGrid, Poster, PosterFooter, PosterIconWrapper, PosterRating, PosterTitle, PosterTitleWrapper, MovieRating } from './style'
 
 const MovieCard = ({ data }) => {
@@ -28,7 +29,7 @@ const MovieCard = ({ data }) => {
     const RModal = <RatingModal modalVisibe={modalVisibe} setModalLoading={setModalLoading} modalLoading={modalLoading}
         setVisible={setModalVisible} hide={hide} title={`1x01 (1) OPERATION STRIX`} />
 
-    const WModal = <RatingModal modalVisibe={modalVisibe} setModalLoading={setModalLoading} modalLoading={modalLoading}
+    const WModal = <WatchedModal modalVisibe={modalVisibe} setModalLoading={setModalLoading} modalLoading={modalLoading}
         setVisible={setModalVisible} hide={hide} title={`1x01 (1) OPERATION STRIX Watched`} />
 
     return (

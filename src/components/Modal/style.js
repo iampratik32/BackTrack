@@ -13,5 +13,5 @@ export const CenteredView = styled.View`
 export const ModalView = styled(FlexVertical)`
     background-color: ${colors.darkBlueGrey};
     align-items: center;
-    padding: ${height*0.03}px;
+    padding: ${height*0.01}px;
 `
