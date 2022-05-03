@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { colors } from '../../../assets/colors'
-import { FlexHorizontal, FlexVertical, GlobalText, HSpacer, MainView, VSpacer } from '../../../assets/globalStyle'
+import { FlexHorizontal, GlobalText, HSpacer, MainView, StatsCard, VSpacer } from '../../../assets/globalStyle'
 import HistoryContainer from '../../../components/HistoryContainer'
 import Pagination from '../../../components/Pagination'
 import Picker from '../../../components/Picker'
 import { size } from '../../../utils/device'
-import { StatsCard } from './style'
 // import { Picker } from '@react-native-picker/picker'
 
 const History = ({ navigation }) => {

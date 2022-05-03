@@ -105,3 +105,11 @@ export const RadiusView = styled.View`
     margin-right: 5px;
     margin-top: 5px;
 `
+export const StatsCard = styled(FlexHorizontal)`
+    display: flex;
+    width: auto;
+    padding: ${height * 0.01}px;
+    margin: ${height * 0.01}px;
+    flex-direction: row;
+    justify-content: center;
+`
