@@ -94,8 +94,14 @@ export const OkButton = styled.Pressable`
     flex-direction: row;
     border-radius: 10px;
     border: 1px solid ${colors.rating};
-    margin: ${height*0.01}px;
+    margin: ${height * 0.01}px;
 `
 export const LoadingContainer = styled.View`
-    margin: ${height*0.01}px;
+    margin: ${height * 0.01}px;
+`
+export const RadiusView = styled.View`
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-top: 5px;
 `
