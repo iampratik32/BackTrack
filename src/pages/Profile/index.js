@@ -20,7 +20,7 @@ const Profile = ({ navigation }) => {
         { name: 'Ratings', open: 'ProfileRatingsScreen', image: 'https://coolmaterial.com/wp-content/uploads/2017/07/Tyrion-Dragon.jpg' },
         { name: 'Lists', open: 'ProfileHistoryScreen', image: 'https://wallpaperaccess.com/full/5599270.jpg' },
         { name: 'Comments', open: 'ProfileHistoryScreen', image: 'https://images.wallpapersden.com/image/download/keeping-up-with-the-kardashians-2020_bGhlaWuUmZqaraWkpJRobWllrWdma2U.jpg' },
-        { name: 'Friends', open: 'ProfileHistoryScreen', image: 'https://wallpaperaccess.com/full/1504291.jpg' },
+        { name: 'Friends', open: 'ProfileFriendsScreen', image: 'https://wallpaperaccess.com/full/1504291.jpg' },
     ]
 
     const ItemCard = ({ data }) => {

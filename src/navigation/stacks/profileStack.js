@@ -1,9 +1,10 @@
 import React from 'react'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import Profile from '../../pages/Profile';
-import History from '../../pages/Profile/History';
-import Progress from '../../pages/Profile/Progress';
-import Ratings from '../../pages/Profile/Ratings';
+import Profile from '../../pages/Profile'
+import History from '../../pages/Profile/History'
+import Progress from '../../pages/Profile/Progress'
+import Ratings from '../../pages/Profile/Ratings'
+import Friends from '../../pages/Profile/Friends'
 import { colors } from '../../assets/colors';
 
 const Stack = createStackNavigator();
@@ -26,6 +27,8 @@ const ProfileStack = () => {
                 options={() => headerOption('Your Progress')} />
             <Stack.Screen name="ProfileRatingsScreen" animationEnabled={true} component={Ratings}
                 options={() => headerOption('Your Ratings')} />
+            <Stack.Screen name="ProfileFriendsScreen" animationEnabled={true} component={Friends}
+                options={() => headerOption('Your Friends')} />
         </Stack.Navigator>
     )
 }
