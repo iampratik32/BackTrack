@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Fontisto from 'react-native-vector-icons/Fontisto'
@@ -11,7 +13,7 @@ import WatchedModal from '../WatchedModal'
 import { MovieGrid, Poster, PosterFooter, PosterIconWrapper, PosterRating, PosterTitle, PosterTitleWrapper, MovieRating } from './style'
 
 const MovieCard = ({ data }) => {
-
+    const navigation = useNavigation();
     const tempImage = "https://static.onecms.io/wp-content/uploads/sites/6/2010/06/mad-men-season-4_510.jpg"
     const [watched, setWatched] = useState(true)
     const [collected, setCollected] = useState(false)
@@ -34,6 +36,10 @@ const MovieCard = ({ data }) => {
 
     return (
         <>
+          <TouchableOpacity onPress={()=>{navigation.navigate('DetailScreen',{
+              data:data
+          })}}>
+
             <MainModal visible={modalVisibe} hide={hide}
                 data={opening === 'R' ? RModal : WModal} />
             <MovieGrid>
@@ -62,6 +68,8 @@ const MovieCard = ({ data }) => {
                     <PosterTitle ellipsizeMode={'tail'} numberOfLines={1}>Apr 6, 2020 3:09 AM</PosterTitle>
                 </PosterTitleWrapper>
             </MovieGrid>
+
+          </TouchableOpacity>
         </>
     )
 }
