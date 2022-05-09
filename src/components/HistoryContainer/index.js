@@ -7,7 +7,7 @@ import Easing from 'react-native/Libraries/Animated/Easing'
 import { colors } from '../../assets/colors'
 import { size } from '../../utils/device'
 import MovieCard from '../MovieCard'
-import { HistoryMainContiner, HistoryTopContainer, HistoryWrapper } from './style'
+import { HistoryMainContiner, HistoryTopContainer, HistoryWrapper } from '../../assets/globalStyle'
 
 const HistoryContainer = ({ ratings }) => {
 

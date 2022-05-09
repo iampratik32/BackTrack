@@ -21,8 +21,8 @@ export const AvatarContainer = styled.View`
 `
 
 export const Avatar = styled.Image`
-    width: 95px;
-    height: 95px;
+    width: ${p => p.other ? '50px' : '95px'};
+    height: ${p => p.other ? '50px' : '95px'};
     border-radius: ${(width + height) / 2}px;
 `
 
@@ -55,6 +55,6 @@ export const CardBackground = styled(ImageBackground)`
     height: ${height * 0.13}px;
     display: flex;
     justify-content: flex-end;
-    padding: ${height*0.01}px;
+    padding: ${height * 0.01}px;
     margin-bottom: ${height * 0.015}px;
 `

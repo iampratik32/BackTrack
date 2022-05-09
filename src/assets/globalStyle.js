@@ -1,3 +1,4 @@
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import styled from 'styled-components/native'
 import { size } from '../utils/device'
 import { colors } from './colors'
@@ -112,4 +113,31 @@ export const StatsCard = styled(FlexHorizontal)`
     margin: ${height * 0.01}px;
     flex-direction: row;
     justify-content: center;
+`
+
+export const HistoryWrapper = styled(FlexVertical)`
+    background-color: ${colors.materialBlack};
+`
+
+export const HistoryTopContainer = styled(FlexHorizontal)`
+    background-color: ${colors.darkBlueGrey};
+    align-items: center;
+    border-radius: 10px;
+    padding: ${height * 0.01}px;
+`
+export const HistoryMainContiner = styled(FlexVertical)`
+    height: ${p => p.closed ? '0px' : 'undefined'};
+    opacity: ${p => p.hide ? 0 : 1};
+    margin-bottom: ${height * 0.005}px;
+    margin-top: ${height * 0.005}px;
+`
+
+export const FriendsItemWrapper = styled(TouchableOpacity)`
+    background-color: ${colors.blueGreyDark};
+    flex-direction: row;
+    marginBottom: 10px;
+    paddingTop: 10px;
+    paddingLeft: 5px;
+    paddingBottom: 10px; 
+    paddingRight: 5px
 `
