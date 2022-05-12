@@ -4,7 +4,7 @@ import { colors } from '../../assets/colors'
 import { FlexHorizontal, FlexVertical, FriendsItemWrapper, GlobalText, HSpacer, VSpacer } from '../../assets/globalStyle'
 import { Avatar, AvatarContainer } from '../../pages/Profile/style'
 
-const FriendsItem = ({ item }) => {
+const FriendsItem = ({ item, nav }) => {
 
     const data = {
         "username": "sean",
@@ -35,16 +35,20 @@ const FriendsItem = ({ item }) => {
         // Get User Profile Here... 
     }
 
+    const openProfile = (name) => {
+        nav.navigate(`ProfileDetailScreen`, { navTitle: name })
+    }
+
     return (
-        <FriendsItemWrapper>
+        <FriendsItemWrapper onPress={() => openProfile(data.name)}>
             <AvatarContainer>
                 <Avatar other source={{ uri: data.images?.avatar?.full }} />
             </AvatarContainer>
             <HSpacer rem={15} />
             <View style={{ flex: 5, justifyContent: 'center' }}>
                 <GlobalText weight={'bold'}>{item.user?.name}</GlobalText>
-                <VSpacer rem={3}/>
-                <GlobalText>{item.followed_at?.substring(0,10)}</GlobalText>
+                <VSpacer rem={3} />
+                <GlobalText>{item.followed_at?.substring(0, 10)}</GlobalText>
             </View>
         </FriendsItemWrapper>
     )

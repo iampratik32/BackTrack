@@ -1,4 +1,4 @@
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { TouchableOpacity, ImageBackground } from 'react-native-gesture-handler'
 import styled from 'styled-components/native'
 import { size } from '../utils/device'
 import { colors } from './colors'
@@ -22,7 +22,7 @@ export const SafeView = styled.SafeAreaView`
 export const MainView = styled.ScrollView`
     flex-direction: column;
     background-color: ${colors.materialBlack};
-    padding: ${p => p.landscape ? '1%' : '5%'};
+    padding: ${p => p.np ? 0 : '5%'};
     display: flex;
     flex: 1;
 `
@@ -140,4 +140,13 @@ export const FriendsItemWrapper = styled(TouchableOpacity)`
     paddingLeft: 5px;
     paddingBottom: 10px; 
     paddingRight: 5px
+`
+export const ProfileBack = styled.ImageBackground`
+    height: ${height * 0.3}px;
+    justify-content: flex-end;
+    padding: ${width * 0.05}px;
+`
+export const ProfileInfo = styled(FlexVertical)`
+    margin-left: ${width*0.05}px;
+    justify-content: center;
 `

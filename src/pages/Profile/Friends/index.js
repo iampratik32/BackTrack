@@ -6,7 +6,7 @@ import { colors } from '../../../assets/colors'
 import Picker from '../../../components/Picker'
 import FriendsItem from '../../../components/FriendsItem'
 
-const Friends = () => {
+const Friends = ({ navigation }) => {
 
     const [type, setType] = useState('Friends')
     const [types, setTypes] = useState(['Friends', 'Followers', 'Following'])
@@ -52,7 +52,7 @@ const Friends = () => {
             <Picker list={types} value={type} setValue={setType} />
             <Picker list={sorts} value={sort} setValue={setSort} />
             <VSpacer rem={20} />
-            {data.map((v, i) => <FriendsItem key={i} item={v} />)}
+            {data.map((v, i) => <FriendsItem key={i} item={v} nav={navigation} />)}
             <VSpacer rem={25} />
         </MainView>
     )

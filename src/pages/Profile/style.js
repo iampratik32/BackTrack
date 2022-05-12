@@ -24,6 +24,7 @@ export const Avatar = styled.Image`
     width: ${p => p.other ? '50px' : '95px'};
     height: ${p => p.other ? '50px' : '95px'};
     border-radius: ${(width + height) / 2}px;
+    border: ${p => p.border ? `5px solid ${colors.white}` : '0px'};
 `
 
 export const AvatarDetailContainer = styled(FlexVertical)`
