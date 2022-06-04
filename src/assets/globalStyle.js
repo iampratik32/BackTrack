@@ -139,7 +139,7 @@ export const FriendsItemWrapper = styled(TouchableOpacity)`
     paddingTop: 10px;
     paddingLeft: 5px;
     paddingBottom: 10px; 
-    paddingRight: 5px
+    paddingRight: 5px;
 `
 export const ProfileBack = styled.ImageBackground`
     height: ${height * 0.3}px;
@@ -149,4 +149,15 @@ export const ProfileBack = styled.ImageBackground`
 export const ProfileInfo = styled(FlexVertical)`
     margin-left: ${width*0.05}px;
     justify-content: center;
+`
+
+export const ActionSheetButton = styled.Pressable`
+    width: 100%;
+    flex-direction: row;
+    font-weight: bold;
+    align-items: center;
+    background-color: ${colors.darkBlueGrey};
+    padding-top: ${height*0.02}px;
+    padding-bottom: ${height*0.02}px;
+    padding-left: ${width*0.05}px;
 `

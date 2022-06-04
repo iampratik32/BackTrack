@@ -15,7 +15,13 @@ const TransitionScreenOptions = {
 }
 
 const headerOption = (title) => {
-    return { title: title, headerShown: true, headerTintColor: colors.white, headerStyle: { backgroundColor: colors.materialBlack } }
+    return {
+        title: title,
+        headerShown: true,
+        headerBackTitleVisible: false,
+        headerTintColor: colors.white,
+        headerStyle: { backgroundColor: colors.materialBlack }
+    }
 }
 
 const ProfileStack = () => {
