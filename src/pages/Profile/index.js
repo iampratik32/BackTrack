@@ -18,7 +18,7 @@ const Profile = ({ navigation }) => {
         { name: 'Progress', open: 'ProfileProgressScreen', image: 'https://images4.alphacoders.com/722/thumb-1920-722051.jpg' },
         { name: 'Collection', open: 'ProfileHistoryScreen', image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dddb8beb-7509-4c66-bc59-5e64fc25d614/d8r49ti-84975722-465d-40b1-b4ee-0acf750aefcd.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RkZGI4YmViLTc1MDktNGM2Ni1iYzU5LTVlNjRmYzI1ZDYxNFwvZDhyNDl0aS04NDk3NTcyMi00NjVkLTQwYjEtYjRlZS0wYWNmNzUwYWVmY2QuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.k2kUUiuA2SOv9ZcdaHCgg_B5_v2th0r-PDCNNamdHdM' },
         { name: 'Ratings', open: 'ProfileRatingsScreen', image: 'https://coolmaterial.com/wp-content/uploads/2017/07/Tyrion-Dragon.jpg' },
-        { name: 'Lists', open: 'ProfileHistoryScreen', image: 'https://wallpaperaccess.com/full/5599270.jpg' },
+        { name: 'Lists', open: 'ProfileListScreen', image: 'https://wallpaperaccess.com/full/5599270.jpg' },
         { name: 'Comments', open: 'ProfileHistoryScreen', image: 'https://images.wallpapersden.com/image/download/keeping-up-with-the-kardashians-2020_bGhlaWuUmZqaraWkpJRobWllrWdma2U.jpg' },
         { name: 'Friends', open: 'ProfileFriendsScreen', image: 'https://wallpaperaccess.com/full/1504291.jpg' },
     ]

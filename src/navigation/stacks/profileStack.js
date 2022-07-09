@@ -5,6 +5,7 @@ import History from '../../pages/Profile/History'
 import Progress from '../../pages/Profile/Progress'
 import Ratings from '../../pages/Profile/Ratings'
 import Friends from '../../pages/Profile/Friends'
+import List from '../../pages/Profile/List'
 import Detail from '../../pages/Profile/Detail'
 import { colors } from '../../assets/colors';
 
@@ -36,6 +37,8 @@ const ProfileStack = () => {
                 options={() => headerOption('Your Ratings')} />
             <Stack.Screen name="ProfileFriendsScreen" animationEnabled={true} component={Friends}
                 options={() => headerOption('Your Friends')} />
+            <Stack.Screen name="ProfileListScreen" animationEnabled={true} component={List}
+                options={() => headerOption('Your Lists')} />
             <Stack.Screen name="ProfileDetailScreen" animationEnabled={true} component={Detail}
                 options={({ route }) => headerOption(route.params.navTitle)} />
         </Stack.Navigator>
